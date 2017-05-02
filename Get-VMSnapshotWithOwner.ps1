@@ -2,10 +2,11 @@
 # Name: Get-VMSnapshotWithOwner
 # Created on: 2017-02-01
 # Version 1.0
-# Last Updated: 
-# Last Updated by: John Shelton | c: 260-410-1200 | e: john.shelton@wegmans.com
+# Last Updated: 2017-05-02
+# Last Updated by: John Shelton | c: 260-410-1200 | e: john.shelton@lucky13solutions.com
 #
-# Purpose: 
+# Purpose: Generate and email a report of the current snapshots.  Script needs to be customized
+# with a list of the VCenter servers that it should scan as well as the email settings.
 #
 # Notes: 
 # 
@@ -18,17 +19,16 @@
 #
 $SnapshotRpt = @()
 $CurrentDate = (Get-Date).ToString("yyyy-MM-dd_HHmmss")
-$VCenterServers = ("RDC-VMVC-01"),("BDC-VMVC-01"),("TST-VMVC-01")
+$VCenterServers = ("VCenter01"),("VCenter02"),("VCenter03")
 $ReportName = "c:\Temp\VMSnapshotStatus_$CurrentDate.csv"
 $ReportHTML = "c:\Temp\VMSnapshotStatus_$CurrentDate.html"
 $Subject = "VMWare Snapshot Report as of $CurrentDate"
 #
 # EMail Settings
 #
-#$to = "techwintel-oncall@wegmans.com"
-$to = "john.shelton@wegmans.com"
-$from = "windows.support@wegmans.com"
-$smtpserver = "smtp.wegmans.com"
+$to = "john.shelton@lucky13solutions.com"
+$from = "reports@lucky13solutions.com.com"
+$smtpserver = "smtp.outlook.com"
 #
 # Email Format Settings
 #
