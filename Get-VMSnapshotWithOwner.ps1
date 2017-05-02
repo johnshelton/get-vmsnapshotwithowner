@@ -6,7 +6,8 @@
 # Last Updated by: John Shelton | c: 260-410-1200 | e: john.shelton@lucky13solutions.com
 #
 # Purpose: Generate and email a report of the current snapshots.  Script needs to be customized
-# with a list of the VCenter servers that it should scan as well as the email settings.
+# with a list of the VCenter servers that it should scan as well as the email settings.  The
+# user that runs this needs to have access to VCenter.
 #
 # Notes: 
 # 
@@ -35,8 +36,8 @@ $smtpserver = "smtp.outlook.com"
 $EmailFormat = "<Style>"
 $EmailFormat = $EmailFormat + "BODY{background-color:White;}"
 $EmailFormat = $EmailFormat + "TABLE{border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;}"
-$EmailFormat = $EmailFormat + "TH{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:blue}"
-$EmailFormat = $EmailFormat + "TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:lightgray}"
+$EmailFormat = $EmailFormat + "TH{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:royalblue}"
+$EmailFormat = $EmailFormat + "TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:gainsboro}"
 $EmailFormat = $EmailFormat + "</style>"
 #
 # Loop Through All VCenter Servers
